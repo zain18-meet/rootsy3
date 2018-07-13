@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show Journey</title>
+</head>
+<body>
+	<ul>		
+	  	<li><a href="{{url_for('home')}}"><h4>Home</h4></a></li>
+	  	<li><a href="{{url_for('browse')}}"><h4>Browse</h4></a></li>
+	  	<li><a href="{{url_for('add_journey')}}"><h4>Add Journey</h4></a></li>
+	  	<li><a href="{{url_for('about_us')}}"><h4>About Us</h4></a></li>
+	  	<li><a href="{{url_for('sign_in')}}"><h4>Sign up</h4></a></li>
+	  	<li><a href="{{url_for('sign_in')}}"><h4>Sign in</h4></a></li>
+	</ul>
+
+  <h1>Browse</h1>
+<div id="main">
+        {% for journey in Journeys %}
+
+          <div class="journey_container">
+          <div > <img class="img1" src="{{journey.picture}}" width="150" height="150"></div>
+          <div > 
+          <div >
+              <a href="{{url_for('show_journey',journey_id=journey.id)}}"><h6><div>{{journey.name}}</h6></a>
+            
+            <div>
+              <div><h3>{{journey.location}}</h3></div>
+            </div>
+            </div>
+            </div>
+          </div>
+
+        {% endfor %}
+</div>
+
+</body>
+</html>
