@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Journey</title>
+</head>
+<body>
+	<ul>		
+	  	<li><a href="{{url_for('home')}}"><h4>Home</h4></a></li>
+	  	<li><a href="{{url_for('browse')}}"><h4>Browse</h4></a></li>
+	  	<li><a class="active" href=""><h4>Add Journey</h4></a></li>
+	  	<li><a href="{{url_for('about_us')}}"><h4>About Us</h4></a></li>
+	  	<li><a href="{{url_for('sign_in')}}"><h4>Sign up</h4></a></li>
+	  	<li><a href="{{url_for('sign_in')}}"><h4>Sign in</h4></a></li>
+	</ul>
+
+  <h1>Add A Journey</h1>
+	<form method="post">
+	  Name <input type="text" name="name" placeholder="name"> 
+	  Description <input type="text" name="description" placeholder="Description"> 
+	  Picture <input type="text" name="picture" placeholder="Picture"> 
+	  Group size <input type="text" name="group-size" placeholder="Group size"> 
+	  Location <input type="text" name="location" placeholder="Location"> 
+	  Category <input type="text" name="category" placeholder="Category">
+	 <button type="submit"> Add </button>
+	</form>
+</form>
+</body>
+</html>
